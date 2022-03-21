@@ -1,0 +1,45 @@
+h1{
+    margin: 20px;
+    color:white;
+}
+b{
+    margin: 20px;
+    color:blue;
+}
+u{
+    margin: 20px;
+    color:red;
+}
+body{
+    background-color: grey;
+}
+
+table,th,td{
+    border: 2px solid black;
+    width: 15%;
+    background-color:turquoise;
+}
+table{
+    border-collapse: collapse;
+}
+
+* {
+    box-sizing: border-box;
+}
+button{
+    margin: 20px;
+    color:green;
+}
+@media (min-width:800px) {
+    .home{
+        color: red;
+    }
+    
+}
+@media (max-width:800px) {
+    img{
+        width: 30%;
+        height: 30%;
+    }
+    
+}
