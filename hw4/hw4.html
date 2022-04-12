@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+  <title>My Document</title> 
+  <style>
+  .line{
+      border-left: thick solid rgba(0, 0, 0, 0.411);
+      height:100%;
+      left: 1830px;
+      position: absolute;
+}
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript"> 
+  var i=0;
+  var k=1;
+  var g=1;
+  var char=[ ];
+  char[1]="a.png";
+  char[2]="b.png";
+  char[3]="c.png";
+  char[4]="d.png";
+  char[5]="e.png";
+  char[6]="f.png";
+  char[7]="g.png";
+  char[8]="h.png";
+  char[9]="i.png";  
+  char[10]="j.png";
+  char[11]="k.png";
+  char[12]="l.png";
+  char[13]="m.png";
+  char[14]="n.png";
+  char[15]="o.png";
+  char[16]="p.png";
+  char[17]="q.png";
+  char[18]="r.png";
+  char[19]="s.png";
+  char[20]="t.png";
+  char[21]="u.png";
+  char[22]="v.png";
+  char[23]="w.png";
+  char[24]="x.png";
+  char[25]="y.png";
+  char[26]="z.png";
+  var str1="";
+  var str2="";
+  var str3="";
+  var str4="";
+  var str5="";
+  var str6="";
+
+  function move()
+  {
+    $("#word"+g).animate({
+        left:'1765px'
+    },15000,'linear',lose)
+    g++;
+  }
+
+  function lose()
+  {
+    alert ('game over');
+  }
+
+  function generate1()
+  {
+    var num1 = Math.floor(Math.random() * 26 +1);
+    i++;
+    $("#an1").prepend("<div id='word" + i +"' style='position:absolute;'><img src="+char[num1]+" width='60'></div>");
+    str1=String.fromCharCode(num1+64)+str1;
+    move();
+  }
+  function generate2()
+  {
+    var num2 = Math.floor(Math.random() * 26 + 1);
+    i++;
+    $("#an2").prepend("<div id='word" + i +"' style='position:absolute;'><img src="+char[num2]+" width='60'></div>");
+    str2=String.fromCharCode(num2+64)+str2;
+    move();
+  }
+  function generate3()
+  {
+    var num3 = Math.floor(Math.random() * 26 + 1);
+    i++;
+    $("#an3").prepend("<div id='word" + i +"' style='position:absolute;'><img src="+char[num3]+" width='60'></div>");
+    str3=String.fromCharCode(num3+64)+str3;
+    move();
+  }
+  function generate4()
+  {
+    var num4 = Math.floor(Math.random() * 26 + 1);
+    i++;
+    $("#an4").prepend("<div id='word" + i +"' style='position:absolute;'><img src="+char[num4]+" width='60'></div>");
+    str4=String.fromCharCode(num4+64)+str4;
+    move();
+  }
+  function generate5()
+  {
+    var num5 = Math.floor(Math.random() * 26 + 1);
+    i++;
+    $("#an5").prepend("<div id='word" + i +"' style='position:absolute;'><img src="+char[num5]+" width='60'></div>");
+    str5=String.fromCharCode(num5+64)+str5;
+    move();
+  }
+  function generate6()
+  {
+    var num6 = Math.floor(Math.random() * 26 + 1);
+    i++;
+    $("#an6").prepend("<div id='word" + i +"' style='position:absolute;'><img src="+char[num6]+" width='60'></div>");
+    str6=String.fromCharCode(num6+64)+str6;
+    move();
+  }
+
+  $(document).ready(function() 
+  { 
+    $("#btn1").click(function()
+    {
+      setInterval(generate1,900);
+      setInterval(generate2,1400);
+      setInterval(generate3,1100);
+      setInterval(generate4,1200);
+      setInterval(generate5,1000);
+      setInterval(generate6,1500);
+
+    });
+  } );
+
+  $(document).ready(function() 
+  { 
+    $("*").keydown(function(e)
+    {
+     
+      if(e.key.toUpperCase()==str1.substr(-1))
+      {
+        $("#word"+k).stop();
+        $("#word"+k).remove();
+        k++;
+        str1=str1.substr(0,str1.length-1);
+      }
+    });
+  } );
+  $(document).ready(function() 
+  { 
+    $("*").keydown(function(e)
+    {
+     
+      if(e.key.toUpperCase()==str2.substr(-1))
+      {
+        $("#word"+k).stop();
+        $("#word"+k).remove();
+        k++;
+        str2=str2.substr(0,str2.length-1);
+      }
+    });
+  } );
+  $(document).ready(function() 
+  { 
+    $("*").keydown(function(e)
+    {
+     
+      if(e.key.toUpperCase()==str3.substr(-1))
+      {
+        $("#word"+k).stop();
+        $("#word"+k).remove();
+        k++;
+        str3=str3.substr(0,str3.length-1);
+      }
+    });
+  } );
+  $(document).ready(function() 
+  { 
+    $("*").keydown(function(e)
+    {
+     
+      if(e.key.toUpperCase()==str4.substr(-1))
+      {
+        $("#word"+k).stop();
+        $("#word"+k).remove();
+        k++;
+        str4=str4.substr(0,str4.length-1);
+      }
+    });
+  } );
+  $(document).ready(function() 
+  { 
+    $("*").keydown(function(e)
+    {
+     
+      if(e.key.toUpperCase()==str5.substr(-1))
+      {
+        $("#word"+k).stop();
+        $("#word"+k).remove();
+        k++;
+        str5=str5.substr(0,str5.length-1);
+      }
+    });
+  } );
+  $(document).ready(function() 
+  { 
+    $("*").keydown(function(e)
+    {
+     
+      if(e.key.toUpperCase()==str6.substr(-1))
+      {
+        $("#word"+k).stop();
+        $("#word"+k).remove();
+        k++;
+        str6=str6.substr(0,str6.length-1);
+      }
+    });
+  } );
+  </script> 
+</head> 
+<body> 
+<button id="btn1">Play</button>
+<div class="line"></div>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+<div id="an1" style="position:absolute;"></div>
+</br>
+</br>
+</br>
+</br>
+<hr>
+</br>
+</br>
+</br>
+<div id="an2" style="position:absolute;"></div>
+</br>
+</br>
+</br>
+</br>
+<hr>
+</br>
+</br>
+</br>
+<div id="an3" style="position:absolute;"></div>
+</br>
+</br>
+</br>
+</br>
+<hr>
+</br>
+</br>
+</br>
+<div id="an4" style="position:absolute;"></div>
+</br>
+</br>
+</br>
+</br>
+<hr>
+</br>
+</br>
+</br>
+<div id="an5" style="position:absolute;"></div>
+</br>
+</br>
+</br>
+</br>
+<hr>
+</br>
+</br>
+</br>
+<div id="an6" style="position:absolute;"></div>
+</br>
+</br>
+</br>
+</br>
+<hr>
+</br>
+</br>
+</br>
+</body> 
+</head> 
+</html>
