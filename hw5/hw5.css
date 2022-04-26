@@ -1,0 +1,26 @@
+
+.PT
+{
+    font-weight: bolder; 
+    font-size: 50px; 
+    text-align: center;
+
+}
+#ST
+{
+    text-align: center;
+    font-weight: bolder; 
+    font-size: 30px; 
+}
+.bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -999;
+}
+.bg img{
+    min-height: 100%;
+    width: 100%;
+}
